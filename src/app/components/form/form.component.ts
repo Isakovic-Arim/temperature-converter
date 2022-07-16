@@ -29,7 +29,7 @@ import { Component } from '@angular/core';
 export class FormComponent {
 
   result: number = 0;
-  unit: string = ' °C';
+  unit: string = '';
 
   constructor() { }
 
@@ -38,7 +38,6 @@ export class FormComponent {
   }
 
   calculateResult(type: string, value: string) {
-
     if (type === 'celsius') {
       this.result = this.toFahrenheit(Number(value));
       this.unit = ' °F';
